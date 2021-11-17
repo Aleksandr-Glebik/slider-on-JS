@@ -1,5 +1,5 @@
 const img = document.querySelector('.slider__image')
-const dots = document.querySelectorAll('.slider__dots')
+const dots = document.querySelectorAll('.slider__dot')
 console.log(dots);
 const imgArr = ['./img/html.jpg', './img/css.jpg', './img/js.jpg']
 
@@ -10,8 +10,18 @@ function changeIndex(index) {
     slide(currentIndex)
 }
 
-function slide(ind) {
-    img.src = imgArr[ind]
+function slide(index) {
+    img.src = imgArr[index]
+
+    updateDots(index)
+}
+
+function updateDots(index) {
+    for (let dot of dots) {
+        dot.classList.remove('active')
+    }
+
+    dots[index].classList.add('active')
 }
 
 

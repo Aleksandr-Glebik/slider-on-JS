@@ -56,3 +56,17 @@ body {
 .slider__nav:hover {
   background-color: rgb(246, 112, 112);
 }
+
+/* animation HIDE */
+.hide {
+  animation-name: hide;
+  animation-duration: 1.3s;
+}
+@keyframes hide {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}

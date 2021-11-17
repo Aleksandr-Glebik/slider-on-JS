@@ -11,6 +11,11 @@ function changeIndex(index) {
 }
 
 function slide(index) {
+    img.style.display = 'none'
+    setTimeout(() => {
+        img.style.display = 'block'
+    }, 100)
+
     img.src = imgArr[index]
 
     updateDots(index)

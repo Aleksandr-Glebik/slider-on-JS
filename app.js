@@ -24,6 +24,16 @@ function updateDots(index) {
     dots[index].classList.add('active')
 }
 
+function nextIndex(direction) {
+    currentIndex = currentIndex + direction
+    if (currentIndex >= imgArr.length) {
+        currentIndex = 0
+    } else if (currentIndex < 0) {
+        currentIndex = imgArr.length - 1
+    }
+
+    slide(currentIndex)
+}
 
 
 
